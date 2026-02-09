@@ -40,6 +40,11 @@ tmp/
 temp/
 *.tmp
 
+# Package manager
+# Keep package-lock.json for CI/CD
+yarn.lock
+pnpm-lock.yaml
+
 # Runtime
 *.pid
 *.seed
