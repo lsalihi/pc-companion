@@ -5,6 +5,24 @@ All notable changes to InkBridge PC Companion will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- 🚀 CI/CD Pipeline with GitHub Actions
+  - Automated builds for Windows, macOS, and Linux
+  - Automatic release creation on version tags
+  - Multi-platform testing on Node.js 18 and 20
+  - Nightly builds for development testing
+  - GitHub Actions workflows for build, test, and release
+  - Issue templates for bugs and feature requests
+  - Pull request template
+  - Dependabot configuration for automated dependency updates
+  - Comprehensive CI/CD documentation
+
+### Changed
+- Enhanced README with build status badges
+- Updated .gitignore with CI/CD artifacts
+
 ## [1.0.0] - 2026-02-09
 
 ### Added

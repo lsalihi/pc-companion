@@ -3,6 +3,8 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/lsalihi/pc-companion)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)]()
+[![Build](https://github.com/lsalihi/pc-companion/actions/workflows/build.yml/badge.svg)](https://github.com/lsalihi/pc-companion/actions/workflows/build.yml)
+[![Test](https://github.com/lsalihi/pc-companion/actions/workflows/test.yml/badge.svg)](https://github.com/lsalihi/pc-companion/actions/workflows/test.yml)
 
 Professional desktop companion application for **InkBridge Pro** mobile app. Transform your mobile device into a powerful handwriting input tool for your computer.
 
@@ -21,12 +23,16 @@ Professional desktop companion application for **InkBridge Pro** mobile app. Tra
 
 ### Option 1: Download Executable (Recommended for Users)
 
-Download the latest release for your platform:
-- **Windows**: `InkBridge-PC-Companion-Setup-1.0.0.exe`
-- **macOS**: `InkBridge-PC-Companion-1.0.0.dmg`
-- **Linux**: `InkBridge-PC-Companion-1.0.0.AppImage` or `.deb`
+**[📥 DOWNLOAD FOR YOUR PLATFORM](DOWNLOAD.md)**
 
-[Download Latest Release →](https://github.com/lsalihi/pc-companion/releases)
+Quick download links:
+- **Windows**: [Installer](https://github.com/lsalihi/pc-companion/releases/latest/download/InkBridge-PC-Companion-Setup-1.0.0.exe) | [Portable](https://github.com/lsalihi/pc-companion/releases/latest/download/InkBridge-PC-Companion-1.0.0.exe)
+- **macOS**: [DMG](https://github.com/lsalihi/pc-companion/releases/latest/download/InkBridge-PC-Companion-1.0.0.dmg) | [ZIP](https://github.com/lsalihi/pc-companion/releases/latest/download/InkBridge-PC-Companion-1.0.0-mac.zip)
+- **Linux**: [AppImage](https://github.com/lsalihi/pc-companion/releases/latest/download/InkBridge-PC-Companion-1.0.0.AppImage) | [DEB](https://github.com/lsalihi/pc-companion/releases/latest/download/inkbridge-pc-companion_1.0.0_amd64.deb)
+
+💡 See [DOWNLOAD.md](DOWNLOAD.md) for detailed installation instructions.
+
+[View All Releases →](https://github.com/lsalihi/pc-companion/releases)
 
 ### Option 2: Install from Source (For Developers)
 
