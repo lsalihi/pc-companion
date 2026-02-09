@@ -39,7 +39,7 @@ jobs:
         shell: bash
 
       - name: Upload nightly build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: nightly-${{ matrix.os }}-${{ steps.date.outputs.date }}
           path: dist/*
