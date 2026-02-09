@@ -1,83 +1,156 @@
-# 🖊️ InkBridge Pro - PC Companion
+# 🖊️ InkBridge PC Companion
 
-Application desktop pour recevoir l'écriture manuscrite depuis l'application mobile InkBridge Pro.
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/lsalihi/pc-companion)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)]()
 
-## 🚀 Installation
+Professional desktop companion application for **InkBridge Pro** mobile app. Transform your mobile device into a powerful handwriting input tool for your computer.
+
+## ✨ Features
+
+- 🔄 **Real-time Communication**: WebSocket-based instant data transfer
+- 📱 **Easy Connection**: Scan QR code to connect mobile and desktop
+- ✍️ **Handwriting Input**: Receive handwritten text from your mobile device
+- ⌨️ **Keyboard Simulation**: Automatic typing of recognized text using RobotJS
+- 📋 **Clipboard Integration**: Copy handwriting to clipboard instantly
+- 🎨 **Modern UI**: Beautiful Electron-based interface
+- 🔒 **Secure**: Local network communication only
+- 🌐 **Cross-Platform**: Works on Windows, macOS, and Linux
+
+## 📦 Installation
+
+### Option 1: Download Executable (Recommended for Users)
+
+Download the latest release for your platform:
+- **Windows**: `InkBridge-PC-Companion-Setup-1.0.0.exe`
+- **macOS**: `InkBridge-PC-Companion-1.0.0.dmg`
+- **Linux**: `InkBridge-PC-Companion-1.0.0.AppImage` or `.deb`
+
+[Download Latest Release →](https://github.com/lsalihi/pc-companion/releases)
+
+### Option 2: Install from Source (For Developers)
 
 ```bash
+# Clone the repository
+git clone https://github.com/lsalihi/pc-companion.git
 cd pc-companion
+
+# Install dependencies
 npm install
-```
 
-## 📱 Utilisation
-
-### Démarrer le serveur
-
-```bash
+# Start the application
 npm start
 ```
 
-Cela va :
-1. Démarrer le serveur Socket.IO sur le port 3001
-2. Ouvrir une fenêtre Electron avec le QR code à scanner
-3. Afficher l'adresse IP locale dans la console
+## 🚀 Quick Start
 
-### Scanner le QR Code
+1. **Launch the Application**
+   - Double-click the installed application, or run `npm start` from source
 
-1. Lancez l'application mobile InkBridge Pro sur votre téléphone
-2. Appuyez sur "Connecter au PC"
-3. Scannez le QR code affiché sur votre ordinateur
-4. Une fois connecté, vous pouvez commencer à écrire !
+2. **Scan QR Code**
+   - Open InkBridge Pro mobile app
+   - Navigate to "Connect to PC"
+   - Scan the QR code displayed on your computer
 
-## 🔧 Fonctionnalités
+3. **Start Writing**
+   - Write on your mobile device
+   - Text appears automatically on your computer
 
-- ✅ Génération automatique de QR code avec l'IP locale
-- ✅ Communication temps réel via WebSocket (Socket.IO)
-- ✅ Réception de l'écriture manuscrite
-- ✅ Réception des gestes (espace, retour arrière, entrée, annuler)
-- ✅ Réception de la ponctuation
-- ✅ Interface utilisateur Electron moderne
+## 📖 Documentation
 
-## 🛠️ Architecture
+- [User Guide](docs/USER_GUIDE.md) - Complete usage instructions
+- [Developer Guide](docs/DEVELOPER.md) - Technical documentation
+- [API Reference](docs/API.md) - WebSocket API documentation
+- [Troubleshooting](docs/TROUBLESHOOTING.md) - Common issues and solutions
 
+## 🛠️ System Requirements
+
+### Minimum Requirements
+- **OS**: Windows 10+, macOS 10.13+, or Linux (Ubuntu 18.04+)
+- **RAM**: 2 GB
+- **Network**: WiFi connection
+- **Mobile**: InkBridge Pro app installed
+
+### Recommended
+- **RAM**: 4 GB or more
+- **Network**: 5 GHz WiFi for best performance
+
+## 🔧 Configuration
+
+The application uses port `3001` by default. To change:
+
+```javascript
+// Edit server.js
+const PORT = 3001; // Change to your preferred port
 ```
-pc-companion/
-├── main.js          # Application Electron principale
-├── server.js        # Serveur Socket.IO + Express
-├── package.json     # Dépendances
-└── README.md        # Ce fichier
+
+For advanced configuration, see [Developer Guide](docs/DEVELOPER.md).
+
+## 🏗️ Building from Source
+
+### Build Executables
+
+```bash
+# Install dev dependencies
+npm install
+
+# Build for all platforms
+npm run build
+
+# Or build for specific platform
+npm run build:linux
+npm run build:windows
+npm run build:mac
 ```
 
-## 📡 Communication
+Output files will be in the `dist/` directory.
 
-Le serveur écoute sur tous les événements suivants depuis l'application mobile :
+## 🤝 Contributing
 
-- `handwriting` : Données de tracé manuscrit
-- `gesture` : Gestes (space, backspace, enter, undo)
-- `punctuation` : Symboles de ponctuation
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## 🔒 Sécurité
+## 📝 Changelog
 
-⚠️ **Note** : Cette version utilise CORS avec `origin: "*"` pour le développement.
-Pour la production, configurez des origines spécifiques.
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
 
-## 📝 Développement futur
+## 🐛 Bug Reports
 
-- [ ] Intégration de RobotJS pour simuler vraiment le clavier
-- [ ] Reconnaissance de texte manuscrit avec ML Kit
-- [ ] Support multi-langues
-- [ ] Historique des sessions
-- [ ] Paramètres avancés
+Found a bug? Please [open an issue](https://github.com/lsalihi/pc-companion/issues) with:
+- Operating system and version
+- Application version
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots if applicable
 
-## 🐛 Debug
+## 🔐 Security
 
-Pour voir les logs détaillés :
-- Les événements Socket.IO sont affichés dans la console
-- Les données reçues sont loggées avec des emojis pour une meilleure lisibilité
+For security concerns, please email: security@inkbridge.app
 
-## 💡 Astuce
+Do not open public issues for security vulnerabilities.
 
-Si le QR code ne se charge pas, vérifiez que :
-1. Votre PC et téléphone sont sur le même réseau WiFi
-2. Le pare-feu n'bloque pas le port 3001
-3. L'adresse IP affichée est correcte
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Electron](https://www.electronjs.org/) - Desktop application framework
+- [Express](https://expressjs.com/) - Web server framework
+- [WebSocket](https://github.com/websockets/ws) - Real-time communication
+- [RobotJS](http://robotjs.io/) - Keyboard automation
+- [QRCode](https://www.npmjs.com/package/qrcode) - QR code generation
+
+## 📧 Contact
+
+- Website: [inkbridge.app](https://inkbridge.app)
+- Email: contact@inkbridge.app
+- GitHub: [@lsalihi](https://github.com/lsalihi)
+
+## ⭐ Support
+
+If you find this project helpful, please give it a ⭐️ on GitHub!
+
+---
+
+Made with ❤️ by the InkBridge Team
+
