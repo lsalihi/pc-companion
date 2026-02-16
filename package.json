@@ -79,7 +79,7 @@
   "dependencies": {
     "clipboardy": "^4.0.0",
     "cors": "^2.8.6",
-    "electron": "^40.2.1",
+    "electron": "^40.4.1",
     "express": "^5.2.1",
     "qrcode": "^1.5.4",
     "robotjs": "^0.6.0",
